@@ -12,7 +12,7 @@ function App() {
     <Router>
       <div className="flex flex-col justify-between h-full">
         <Navbar />
-        <main className="mx-auto px-3 pt-4 pb-12">
+        <main className="mx-auto pb-12">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/signin" element={<SiginIn />} />

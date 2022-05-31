@@ -28,7 +28,7 @@ function Navbar() {
           <span className="text-2xl lowercase">e</span>blog
         </h1>
       </div>
-      <nav className="">
+      <nav className="text-sm">
         <div className="absolute right-6 top-5 md:hidden scale-150">
           <button className="scale-125 cursor-pointer" onClick={toggle}>
             <i className="fa-solid fa-bars"></i>
