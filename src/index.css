@@ -7,6 +7,10 @@ html::-webkit-scrollbar {
   display: none;
 }
 
+body {
+  background-color: #111018;
+}
+
 /* Spinner */
 .loadingSpinnerContainer {
   position: fixed;

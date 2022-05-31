@@ -22,14 +22,14 @@ function Navbar() {
   }, [location])
 
   return (
-    <header className="sticky top-0 z-20 w-full flex justify-between p-4 items-center bg-slate-800 text-white">
+    <header className="sticky top-0 z-20 w-full flex justify-between p-2 items-center bg-[#171d22] text-white">
       <div className="text-2xl font-extrabold text-center">
         <h1 className="text-xl uppercase">
           <span className="text-2xl lowercase">e</span>blog
         </h1>
       </div>
       <nav className="text-sm">
-        <div className="absolute right-6 top-5 md:hidden scale-150">
+        <div className="absolute right-6 top-4 md:hidden scale-150">
           <button className="scale-125 cursor-pointer" onClick={toggle}>
             <i className="fa-solid fa-bars"></i>
           </button>
