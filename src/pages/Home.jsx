@@ -7,12 +7,14 @@ function Home() {
   return (
     <div className="mb-10">
       <HomeBanner />
-      <div className="grid grid-cols-3 gap-4 mx-4 mt-4">
-        <div className='col-span-2 '>
-          <BlogCard />
-        </div>
-        <div>
-          <CategoryCard />
+      <div className="container mx-auto">
+        <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-4 mx-4 mt-20">
+          <div className="md:col-span-2 sm:col-span-1 ">
+            <BlogCard />
+          </div>
+          <div>
+            <CategoryCard />
+          </div>
         </div>
       </div>
     </div>

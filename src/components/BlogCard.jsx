@@ -36,7 +36,7 @@ function BlogCard() {
       ) : listings && listings.length > 0 ? (
         <>
           {listings.map((listing) => (
-            <BlogItem key={listing.id} listing={listing.data} />
+            <BlogItem key={listing.id} id={listing.id} listing={listing.data} />
           ))}
         </>
       ) : (

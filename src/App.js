@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import SiginIn from './pages/SignIn'
 import Register from './pages/Register'
 import Profile from './pages/Profile'
+import Blog from './pages/Blog'
 import Categories from './pages/Categories'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -19,6 +20,10 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/category" element={<Categories />} />
+            <Route
+              path="/category/:categoryName/:blogName/:blogId"
+              element={<Blog />}
+            />
           </Routes>
         </main>
         <Footer />
