@@ -27,8 +27,6 @@ function BlogCard() {
     fetchListings()
   }, [])
 
-  console.log(listings)
-
   return (
     <div>
       {loading ? (

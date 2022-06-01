@@ -16,7 +16,6 @@ function Blog() {
       const docSnap = await getDoc(docRef)
 
       if (docSnap.exists()) {
-        console.log(docSnap.data())
         setListing(docSnap.data())
         setLoading(false)
       }
@@ -56,15 +55,6 @@ function Blog() {
               by {listing.author}
             </h1>
           </div>
-          {/* <Link
-            to={`/category/${listing.type}/${id}`}
-            className="text-yellow-400 text-sm font-bold"
-          >
-            Read More
-            <span className="ml-2">
-              <i className="fa-solid fa-angles-right"></i>
-            </span>
-          </Link> */}
         </div>
       </div>
     </main>
