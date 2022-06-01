@@ -25,7 +25,7 @@ function Navbar() {
     <header className="sticky top-0 z-20 w-full flex justify-between p-2 items-center bg-[#171d22] text-white">
       <div className="text-2xl font-extrabold text-center">
         <h1 className="text-xl uppercase">
-          <span className="text-2xl lowercase">e</span>blog
+          <span className="text-2xl lowercase text-yellow-400">e</span>blog
         </h1>
       </div>
       <nav className="text-sm">
@@ -35,16 +35,16 @@ function Navbar() {
           </button>
         </div>
         <ul className="hidden md:flex gap-8 p-4 uppercase font-bold">
-          <li>
+          <li className="hover:text-yellow-400 transition-all ease-out delay-150">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="hover:text-yellow-400 transition-all ease-out delay-150">
             <Link to="/category">Categories</Link>
           </li>
-          <li>
+          <li className="hover:text-yellow-400 transition-all ease-out delay-150">
             <Link to="/signin">Signin</Link>
           </li>
-          <li>
+          <li className="hover:text-yellow-400 transition-all ease-out delay-150">
             <Link to="/register">Register</Link>
           </li>
         </ul>

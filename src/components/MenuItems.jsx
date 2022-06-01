@@ -12,16 +12,16 @@ function MenuItems({ toggle, isOpen }) {
       <button className="cursor-pointer scale-150" onClick={toggle}>
         <i className="fa-solid fa-circle-xmark"></i>
       </button>
-      <li>
+      <li className="hover:text-yellow-400 transition-all ease-out delay-150">
         <Link to="/">Home</Link>
       </li>
-      <li>
+      <li className="hover:text-yellow-400 transition-all ease-out delay-150">
         <Link to="/category">Categories</Link>
       </li>
-      <li>
+      <li className="hover:text-yellow-400 transition-all ease-out delay-150">
         <Link to="/signin">Signin</Link>
       </li>
-      <li>
+      <li className="hover:text-yellow-400 transition-all ease-out delay-150">
         <Link to="/register">Register</Link>
       </li>
     </ul>
