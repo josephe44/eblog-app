@@ -33,7 +33,7 @@ function BlogItem({ id, listing }) {
             </h1>
           </div>
           <Link
-            to={`/category/${listing.type}/${id}`}
+            to={`/category/${listing.type}/${listing.title}/${id}`}
             className="text-yellow-400 text-sm font-bold"
           >
             Read More
