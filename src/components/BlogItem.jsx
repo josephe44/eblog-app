@@ -19,7 +19,7 @@ function BlogItem({ id, listing }) {
               {listing.date}
             </p>
             <h1 className="text-2xl font-bold mb-4">{listing.title}</h1>
-            <p classname="mt-4">{listing.quota}</p>
+            <p className="mt-4">{listing.quota}</p>
           </div>
         </div>
         <hr className="mx-4" />

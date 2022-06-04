@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { collection, getDocs, query, orderBy, limit } from 'firebase/firestore'
 import { db } from '../firebase.config'
 import BlogItem from './BlogItem'
+import Spinner from './Spinner'
 
 function BlogCard() {
   const [listings, setListings] = useState(null)
@@ -30,7 +31,7 @@ function BlogCard() {
   return (
     <div>
       {loading ? (
-        <div>Loading...</div>
+        <Spinner />
       ) : listings && listings.length > 0 ? (
         <>
           {listings.map((listing) => (

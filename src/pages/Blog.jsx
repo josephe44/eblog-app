@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { getDoc, doc } from 'firebase/firestore'
 import { db } from '../firebase.config'
+import Spinner from '../components/Spinner'
 
 function Blog() {
   const [listing, setListing] = useState(null)
@@ -24,7 +25,7 @@ function Blog() {
   }, [navigate, params.blogId])
 
   if (loading) {
-    return <div className="text-white">Loading....</div>
+    return <Spinner />
   }
 
   return (
@@ -43,9 +44,9 @@ function Blog() {
             {listing.date}
           </p>
           <h1 className="text-4xl font-bold mb-4">{listing.title}</h1>
-          <p classname="mt-4">{listing.article}</p>
+          <p className="mt-4">{listing.article}</p>
         </div>
-        <hr className='m-2' />
+        <hr className="m-2" />
         <div className="flex justify-between items-center mt-4 mx-2 mb-4 text-center">
           <div className="text-sm font-semibold">
             <h1>

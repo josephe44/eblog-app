@@ -5,7 +5,7 @@ function MenuItems({ toggle, isOpen }) {
     <ul
       className={
         isOpen
-          ? 'flex-col flex items-center fixed inset-0 left-1/4 uppercase bg-slate-800/95 backdrop-blur-md text-white font-bold justify-center gap-8 md:hidden'
+          ? 'flex-col flex items-center fixed inset-0 left-1/4 uppercase bg-[#171d22]/95 backdrop-blur-md text-white font-bold justify-center gap-8 md:hidden'
           : 'hidden'
       }
     >
