@@ -29,6 +29,17 @@ function CreatingBlog() {
   const navigate = useNavigate()
   const auth = getAuth()
 
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setFormData({ ...formData, userRef: user.uid })
+      } else {
+        navigate('/sign-in')
+      }
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   const onMutate = (e) => {
     // Files
     if (e.target.files) {
@@ -105,23 +116,21 @@ function CreatingBlog() {
       return
     })
 
-    console.log(imageUrls)
-
     // setting all data gotten from the formData and uploaded imageUrls with goelocation to the formDataCopy
-    // const formDataCopy = {
-    //   ...formData,
-    //   imageUrls,
-    //   timestamp: serverTimestamp(),
-    // }
+    const formDataCopy = {
+      ...formData,
+      imageUrls,
+      timestamp: serverTimestamp(),
+    }
     // Cleaning up things we dont need in the formDataCopy
-    // delete formDataCopy.images
+    delete formDataCopy.images
 
     // Saving formDataCopy to the firebase database
-    // const docRef = await addDoc(collection(db, 'listings'), formDataCopy)
-    // setLoading(false)
-    // navigate(
-    //   `/category/${formDataCopy.type}/${formDataCopy.title}/${docRef.id}`
-    // )
+    const docRef = await addDoc(collection(db, 'listings'), formDataCopy)
+    setLoading(false)
+    navigate(
+      `/category/${formDataCopy.type}/${formDataCopy.title}/${docRef.id}`
+    )
   }
 
   if (loading) {
