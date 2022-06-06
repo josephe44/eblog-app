@@ -29,7 +29,7 @@ function Blog() {
   }
 
   return (
-    <main className="container grid md:grid-cols-3 sm:grid-cols-1 gap-4 p-4  text-white mb-8">
+    <main className="container grid md:mx-auto lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 p-4  text-white mb-8">
       <div className="w-full p-2 bg-[#1f1e24] rounded-lg md:col-span-2 sm:col-span-1">
         <img
           className="h-96 w-full rounded-lg"
