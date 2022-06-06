@@ -48,57 +48,59 @@ function SignIn() {
 
   return (
     <div className="container mx-auto">
-      <div className="grid place-items-center mb-24">
-        <div className="card w-full max-w-2xl shadow bg-base-100 mt-6">
-          <div className="card-title mt-4 ml-8">
-            <h1 className="text-xl">Welcome Back!</h1>
+      <div className="grid place-items-center mb-24 mx-4">
+        <div className="w-full max-w-2xl shadow mt-6">
+          <div className="mt-4 text-center">
+            <h1 className="text-2xl font-bold text-white">Welcome Back!</h1>
           </div>
-          <div className="card-body">
-            <form onSubmit={handleSubmit}>
-              <div className="form-control">
-                <label className="label text-white">
-                  <span className="label-text">Email</span>
-                </label>
-                <input
-                  type="text"
-                  name="email"
-                  value={email}
-                  onChange={handleChange}
-                  placeholder="email"
-                  className="input input-bordered"
-                />
-              </div>
-              <div className="form-control">
-                <label className="label text-white">
-                  <span className="label-text">Password</span>
-                </label>
-                <input
-                  type="password"
-                  name="password"
-                  value={password}
-                  onChange={handleChange}
-                  placeholder="password"
-                  className="input input-bordered"
-                />
-                <label className="label flex justify-end">
-                  <Link
-                    to="/forgot-password"
-                    className="label-text-alt link link-hover text-white"
-                  >
-                    Forgot password?
-                  </Link>
-                </label>
-              </div>
-              <div className="form-control mt-6 bg-white">
-                <button className="btn bg-neutral">Login</button>
-              </div>
-            </form>
-            <div className="divider">OR</div>
-            <div className="form-control mt-6">
-              <Link to="/sign-up" className="btn btn-ghost">
-                Create an account
-              </Link>
+          <form onSubmit={handleSubmit}>
+            <div className="mt-4">
+              <label className="label text-white">
+                <span className="label-text">Email</span>
+              </label>
+              <input
+                type="text"
+                name="email"
+                value={email}
+                onChange={handleChange}
+                placeholder="email"
+                className="p-2 border-2 border-gray-400 rounded-lg w-full"
+              />
             </div>
+            <div className="mt-4">
+              <label className="label text-white">
+                <span className="label-text">Password</span>
+              </label>
+              <input
+                type="password"
+                name="password"
+                value={password}
+                onChange={handleChange}
+                placeholder="password"
+                className="p-2 border-2 border-gray-400 rounded-lg w-full"
+              />
+              <label className="label flex justify-end">
+                <Link
+                  to="/forgot-password"
+                  className="label-text-alt link link-hover text-yellow-400"
+                >
+                  Forgot password?
+                </Link>
+              </label>
+            </div>
+            <div className="mt-6">
+              <button className="bg-white text-black p-3 font-bold uppercase text-lg rounded-lg w-full">
+                Login
+              </button>
+            </div>
+          </form>
+          <div className="mt-6 max-w-full">
+            <Link
+              to="/register"
+              className="block text-center bg-[#1f1e24] text-white p-3 font-bold uppercase text-md rounded-lg"
+            >
+              Create an account
+            </Link>
           </div>
         </div>
       </div>
