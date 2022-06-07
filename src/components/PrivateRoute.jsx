@@ -7,7 +7,7 @@ function PrivateRoute() {
   if (checkingStatus) {
     return <Spinner />
   }
-  return loggedIn ? <Outlet /> : <Navigate to="/sign-in" />
+  return loggedIn ? <Outlet /> : <Navigate to="/signin" />
 }
 
 export default PrivateRoute
