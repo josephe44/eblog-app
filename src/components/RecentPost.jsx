@@ -40,28 +40,28 @@ function RecentPost() {
 
   return (
     listings && (
-      <div className="mt-2 bg-[#1f1e24] p-2 rounded-lg">
+      <div className="mt-2 bg-[#1f1e24] rounded-lg overflow-hidden">
         <h1 className="text-xl font-semibold">Recent Posts</h1>
         <span className="block w-10 mt-1 mb-2 h-0.5 bg-yellow-400"></span>
         {listings.map(({ id, data }) => (
           <div
-            className="grid grid-cols-3 gap-2 capitalize cursor-pointer"
+            className="flex capitalize cursor-pointer"
             key={data.title}
             onClick={() =>
               navigate(`/category/${data.type}/${data.title}/${id}`)
             }
           >
-            <div className="w-24 h-auto mb-2 bg-white m-2">
+            <div className="max-w-full w-24 h-auto mb-2 bg-white m-2">
               <img
-                className="w-full h-full p-1"
+                className="w-full bg-contain  p-1"
                 src={data.imageUrls}
                 alt="postImage"
               />
             </div>
             <div className="text-white col-span-2 ml-4 ">
-              <h3 className="text-md font-bold mt-1 leading-tight">
+              <p className="md:text-lg lg:text-sm font-bold mt-1 leading-tight">
                 {data.title}
-              </h3>
+              </p>
               <p className="text-xs mt-2">
                 <span className="text-yellow-400 mr-2">
                   <i className="fa-solid fa-clock"></i>

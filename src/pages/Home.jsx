@@ -12,7 +12,7 @@ function Home() {
           <div className="md:col-span-2 sm:col-span-1">
             <BlogCard />
           </div>
-          <div>
+          <div className='mt-6'>
             <CategoryCard />
           </div>
         </div>
