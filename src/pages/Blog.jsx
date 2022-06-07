@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { getDoc, doc } from 'firebase/firestore'
 import { db } from '../firebase.config'
 import Spinner from '../components/Spinner'
+import RecentPost from '../components/RecentPost'
+import CategoryCard from '../components/CategoryCard'
 
 function Blog() {
   const [listing, setListing] = useState(null)
@@ -29,8 +31,8 @@ function Blog() {
   }
 
   return (
-    <main className="container grid md:mx-auto lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 p-4  text-white mb-8">
-      <div className="w-full p-2 bg-[#1f1e24] rounded-lg md:col-span-2 sm:col-span-1">
+    <main className="container grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-4 p-4  text-white mb-8">
+      <div className="w-full p-2 bg-[#1f1e24] rounded-lg lg:col-span-2 md:col-span-3 sm:col-span-1">
         <img
           className="h-96 w-full rounded-lg"
           src={listing.imageUrls}
@@ -57,6 +59,10 @@ function Blog() {
             </h1>
           </div>
         </div>
+      </div>
+      <div>
+        <CategoryCard />
+        <RecentPost />
       </div>
     </main>
   )
