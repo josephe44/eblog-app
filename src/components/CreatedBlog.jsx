@@ -21,7 +21,7 @@ function createdBlog({ listing, id, onDelete, onEdit }) {
         <div className="flex gap-2">
           {onDelete && (
             <button
-              className="bg-red-400 px-2 py-1 font-semibold capitalize rounded w-full h-10 whitespace-nowrap"
+              className="bg-red-400 text-white px-2 py-1 font-semibold capitalize rounded w-full h-10 whitespace-nowrap"
               onClick={() => onDelete(id)}
             >
               <span>
