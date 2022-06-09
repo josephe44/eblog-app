@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 function createdBlog({ listing, id, onDelete, onEdit }) {
   return (
     <>
-      <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-2 bg-white text-[#171d22] py-8 px-4 rounded-sm my-2">
+      <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-2 bg-white text-[#171d22] py-4 px-4 rounded-sm my-2">
         <div className="flex">
           <Link
             to={`/category/${listing.type}/${listing.title}/${id}`}
