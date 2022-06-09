@@ -1,7 +1,9 @@
-import React from 'react'
+import HomeBanner from "../components/HomeBanner"
 
 function Categories() {
-  return <div>Categories</div>
+  return <div>
+    <HomeBanner />
+  </div>
 }
 
 export default Categories
