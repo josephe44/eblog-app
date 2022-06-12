@@ -70,7 +70,7 @@ function Profile() {
 
   // edit the user's listing
   const onEdit = (listingId) => {
-    navigate(`/edit-listing/${listingId}`)
+    navigate(`/editBlog/${listingId}`)
   }
 
   return (

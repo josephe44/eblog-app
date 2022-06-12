@@ -9,6 +9,7 @@ import CreatingBlog from './pages/CreatingBlog'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import PrivateRoute from './components/PrivateRoute'
+import EditBlog from './pages/EditBlog'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             </Route>
             <Route path="/category" element={<Categories />} />
             <Route path="/createBlog" element={<CreatingBlog />} />
+            <Route path="/editBlog/:blogId" element={<EditBlog />} />
             <Route
               path="/category/:categoryName/:blogName/:blogId"
               element={<Blog />}
