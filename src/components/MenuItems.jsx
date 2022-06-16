@@ -16,9 +16,6 @@ function MenuItems({ toggle, isOpen }) {
         <Link to="/">Home</Link>
       </li>
       <li className="hover:text-yellow-400 transition-all ease-out delay-150">
-        <Link to="/category">Categories</Link>
-      </li>
-      <li className="hover:text-yellow-400 transition-all ease-out delay-150">
         <Link to="/profile">Profile</Link>
       </li>
     </ul>

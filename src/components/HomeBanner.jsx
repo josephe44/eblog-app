@@ -21,9 +21,9 @@ function HomeBanner() {
         </h1>
         <p className="mt-6 font-semibold">
           <span className="text-yellow-400">
-            {location.pathname === '/' ? 'Home' : 'Categories'}
+            {location.pathname === '/' ? 'Home' : 'Blog'}
           </span>
-          <span className="text-xs bg-white mx-1">|</span> blog page
+          <span className="text-xs bg-white mx-1">|</span>blog page
         </p>
       </div>
     </div>

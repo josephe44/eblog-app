@@ -23,7 +23,7 @@ function Navbar() {
 
   return (
     <header className="sticky top-0 z-20 w-full flex justify-between p-2 items-center bg-[#171d22] text-white">
-      <div className="text-2xl font-extrabold text-center">
+      <div className="text-2xl font-extrabold text-center md:ml-10">
         <h1 className="text-xl uppercase">
           <span className="text-2xl lowercase text-yellow-400">e</span>blog
         </h1>
@@ -34,12 +34,9 @@ function Navbar() {
             <i className="fa-solid fa-bars"></i>
           </button>
         </div>
-        <ul className="hidden md:flex gap-8 p-4 uppercase font-bold">
+        <ul className="hidden md:flex gap-8 p-4 uppercase font-bold mr-10">
           <li className="hover:text-yellow-400 transition-all ease-out delay-150">
             <Link to="/">Home</Link>
-          </li>
-          <li className="hover:text-yellow-400 transition-all ease-out delay-150">
-            <Link to="/category">Categories</Link>
           </li>
           <li className="hover:text-yellow-400 transition-all ease-out delay-150">
             <Link to="/profile">Profile</Link>

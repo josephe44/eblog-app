@@ -4,7 +4,6 @@ import SiginIn from './pages/SignIn'
 import Register from './pages/Register'
 import Profile from './pages/Profile'
 import Blog from './pages/Blog'
-import Categories from './pages/Categories'
 import CreatingBlog from './pages/CreatingBlog'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -24,7 +23,7 @@ function App() {
             <Route path="/profile" element={<PrivateRoute />}>
               <Route path="/profile" element={<Profile />} />
             </Route>
-            <Route path="/category" element={<Categories />} />
+
             <Route path="/createBlog" element={<CreatingBlog />} />
             <Route path="/editBlog/:blogId" element={<EditBlog />} />
             <Route
